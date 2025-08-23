@@ -21,9 +21,13 @@ const sasl = process.env.KAFKA_SASL_USERNAME && process.env.KAFKA_SASL_PASSWORD
 const kafka = new Kafka({
   clientId: process.env.KAFKA_CLIENT_ID || 'kafka-basics-node',
   brokers,
-  ssl: useSsl,
-  sasl,
+  // ssl: useSsl,
+  // sasl,
   logLevel: logLevel.INFO,
+  retry: {
+    initialRetryTime: 300,
+    retries: 10
+  }
 });
 
 export default kafka; 

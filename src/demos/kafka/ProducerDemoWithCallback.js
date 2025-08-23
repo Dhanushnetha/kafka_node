@@ -15,17 +15,17 @@ async function main() {
         const value = `hello world ${i}`;
         const responses = await producer.send({ topic, messages: [{ value }] });
         for (const res of responses) {
-          for (const p of res.partitions) {
+          // for (const p of res.partitions) {
             logger.info(
               {
                 topic: res.topicName,
-                partition: p.partition,
-                baseOffset: p.baseOffset,
-                logAppendTime: p.logAppendTime,
+                partition: res.partition,
+                baseOffset: res.baseOffset,
+                logAppendTime: res.logAppendTime,
               },
               'Received new metadata'
             );
-          }
+          // }
         }
       }
       await sleep(500);

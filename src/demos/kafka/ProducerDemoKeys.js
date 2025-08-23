@@ -14,9 +14,9 @@ async function main() {
         const value = `hello world ${i}`;
         const responses = await producer.send({ topic, messages: [{ key, value }] });
         for (const res of responses) {
-          for (const p of res.partitions) {
-            logger.info(`Key: ${key} | Partition: ${p.partition}`);
-          }
+          // for (const p of res.partition) {
+            logger.info(`Key: ${key} | Partition: ${res.partition}`);
+          // }
         }
       }
     }

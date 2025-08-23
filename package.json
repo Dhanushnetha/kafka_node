@@ -4,9 +4,13 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "admin:create": "node src/demos/kafka/admin/admin.js create",
+    "admin:describe": "node src/demos/kafka/admin/admin.js describe",
+    "producer": "node src/demos/kafka/producer.js",
     "producer:basic": "node src/demos/kafka/ProducerDemo.js",
     "producer:callback": "node src/demos/kafka/ProducerDemoWithCallback.js",
     "producer:keys": "node src/demos/kafka/ProducerDemoKeys.js",
+    "consumer": "node src/demos/kafka/consumer.js",
     "consumer:basic": "node src/demos/kafka/ConsumerDemo.js",
     "consumer:shutdown": "node src/demos/kafka/ConsumerDemoWithShutdown.js",
     "consumer:cooperative": "node src/demos/kafka/ConsumerDemoCooperative.js",

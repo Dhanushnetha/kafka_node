@@ -13,8 +13,8 @@ async function main() {
   consumer.on(consumer.events.REBALANCING, (e) => {
     logger.info({ event: 'REBALANCING', ...e.payload }, 'onPartitionsRevoked-like callback triggered');
   });
-  consumer.on(consumer.events.REBALANCED, (e) => {
-    logger.info({ event: 'REBALANCED', ...e.payload }, 'onPartitionsAssigned-like callback triggered');
+  consumer.on(consumer.events.GROUP_JOIN, (e) => {
+    logger.info({ event: 'GROUP_JOIN', ...e.payload }, 'onPartitionsAssigned-like callback triggered');
   });
 
   const shutdown = async () => {
