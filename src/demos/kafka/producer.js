@@ -3,7 +3,7 @@ import kafka from '../../config/kafka.js';
 dotenv.config();
 
 const {
-  TOPIC = 'orders'
+  TOPIC = 'node_demo'
 } = process.env;
 
 async function run() {

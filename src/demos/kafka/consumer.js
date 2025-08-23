@@ -3,8 +3,8 @@ import kafka from '../../config/kafka.js';
 dotenv.config();
 
 const {
-  TOPIC = 'orders',
-  GROUP_ID = 'orders-group'
+  TOPIC = 'node_demo',
+  GROUP_ID = 'my-app'
 } = process.env;
 
 async function run() {

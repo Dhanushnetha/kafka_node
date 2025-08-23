@@ -10,12 +10,18 @@ Node.js equivalents of the `kafka-basics` Java demos using KafkaJS.
 
 ## Scripts
 
+- Creating Topics and Describe
+  - npm run admin:create
+  - npm run admin:describe
+
 - Producers:
+  - npm run producer
   - npm run producer:basic
   - npm run producer:callback
   - npm run producer:keys
 
 - Consumers:
+  - npm run consumer
   - npm run consumer:basic
   - npm run consumer:shutdown
   - npm run consumer:cooperative
@@ -25,4 +31,4 @@ Node.js equivalents of the `kafka-basics` Java demos using KafkaJS.
   - npm run advanced:rebalance-listener
   - npm run advanced:threads
 
-Topics default to `demo_java` to mirror the Java demos. 
+Topics default to `node_demo` to mirror the Java demos. 

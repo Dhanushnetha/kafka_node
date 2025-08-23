@@ -1,7 +1,7 @@
 import kafka from '../../config/kafka.js';
 import logger from '../../config/logger.js';
 
-const topic = 'demo_java';
+const topic = 'node_demo';
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
