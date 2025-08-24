@@ -10,6 +10,7 @@
     "producer:basic": "node src/demos/kafka/ProducerDemo.js",
     "producer:callback": "node src/demos/kafka/ProducerDemoWithCallback.js",
     "producer:keys": "node src/demos/kafka/ProducerDemoKeys.js",
+    "producer:wikimedia": "node src/wikimedia/WikimediaChangesProducer.js",
     "consumer": "node src/demos/kafka/consumer.js",
     "consumer:basic": "node src/demos/kafka/ConsumerDemo.js",
     "consumer:shutdown": "node src/demos/kafka/ConsumerDemoWithShutdown.js",
@@ -21,6 +22,8 @@
   "dependencies": {
     "dotenv": "^16.4.5",
     "kafkajs": "^2.2.4",
+    "eventsource": "^2.0.2",
+    "eventsource-parser": "^1.1.1",
     "pino": "^9.3.2"
   }
 } 
