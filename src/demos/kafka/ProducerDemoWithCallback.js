@@ -1,7 +1,7 @@
 import kafka from '../../config/kafka.js';
 import logger from '../../config/logger.js';
 
-const topic = 'demo_java';
+const topic = 'node_demo';
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
@@ -15,17 +15,17 @@ async function main() {
         const value = `hello world ${i}`;
         const responses = await producer.send({ topic, messages: [{ value }] });
         for (const res of responses) {
-          for (const p of res.partitions) {
+          // for (const p of res.partitions) {
             logger.info(
               {
                 topic: res.topicName,
-                partition: p.partition,
-                baseOffset: p.baseOffset,
-                logAppendTime: p.logAppendTime,
+                partition: res.partition,
+                baseOffset: res.baseOffset,
+                logAppendTime: res.logAppendTime,
               },
               'Received new metadata'
             );
-          }
+          // }
         }
       }
       await sleep(500);

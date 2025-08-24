@@ -1,7 +1,7 @@
 import kafka from '../../config/kafka.js';
 import logger from '../../config/logger.js';
 
-const topic = 'demo_java';
+const topic = 'node_demo';
 
 async function main() {
   logger.info('I am a Kafka Producer!');
@@ -14,9 +14,9 @@ async function main() {
         const value = `hello world ${i}`;
         const responses = await producer.send({ topic, messages: [{ key, value }] });
         for (const res of responses) {
-          for (const p of res.partitions) {
-            logger.info(`Key: ${key} | Partition: ${p.partition}`);
-          }
+          // for (const p of res.partition) {
+            logger.info(`Key: ${key} | Partition: ${res.partition}`);
+          // }
         }
       }
     }
