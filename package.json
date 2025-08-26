@@ -15,6 +15,7 @@
     "consumer:basic": "node src/demos/kafka/ConsumerDemo.js",
     "consumer:shutdown": "node src/demos/kafka/ConsumerDemoWithShutdown.js",
     "consumer:cooperative": "node src/demos/kafka/ConsumerDemoCooperative.js",
+    "opensearch":"node src/opensearch/OpenSearchConsumer.js",
     "advanced:assign-seek": "node src/demos/kafka/advanced/ConsumerDemoAssignSeek.js",
     "advanced:rebalance-listener": "node src/demos/kafka/advanced/ConsumerDemoRebalanceListener.js",
     "advanced:threads": "node src/demos/kafka/advanced/ConsumerDemoThreads.js"
@@ -24,6 +25,7 @@
     "kafkajs": "^2.2.4",
     "eventsource": "^2.0.2",
     "eventsource-parser": "^1.1.1",
+    "@opensearch-project/opensearch": "^2.8.0",
     "pino": "^9.3.2"
   }
 } 

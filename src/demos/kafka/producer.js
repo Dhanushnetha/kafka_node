@@ -3,7 +3,7 @@ import kafka from '../../config/kafka.js';
 dotenv.config();
 
 const {
-  TOPIC = 'node_demo'
+  TOPIC = 'wikimedia.recentchange'
 } = process.env;
 
 async function run() {

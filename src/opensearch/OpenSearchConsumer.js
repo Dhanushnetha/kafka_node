@@ -57,6 +57,9 @@ async function main() {
           bulkBody.push(indexAction);
           bulkBody.push(value);
 
+          // consumer.commitOffsets([
+          //   {topic:batch.partition, partition:batch.partition, offset: (Number(message.offset)+1).toString()}
+          // ])
           resolveOffset(message.offset);
           await heartbeat();
         }

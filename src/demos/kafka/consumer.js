@@ -3,8 +3,8 @@ import kafka from '../../config/kafka.js';
 dotenv.config();
 
 const {
-  TOPIC = 'node_demo',
-  GROUP_ID = 'my-app'
+  TOPIC = 'wikimedia.recentchange',
+  GROUP_ID = 'consumer-opensearch-demo'
 } = process.env;
 
 async function run() {

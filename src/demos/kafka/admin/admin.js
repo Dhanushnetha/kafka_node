@@ -3,7 +3,7 @@ import kafka from '../../../config/kafka.js';
 dotenv.config();
 
 const {
-  TOPIC = 'node_demo'
+  TOPIC = 'wikimedia.recentchange'
 } = process.env;
 
 async function createTopic() {
@@ -16,7 +16,7 @@ async function createTopic() {
     topics: [
       {
         topic: TOPIC,
-        numPartitions: 3,y
+        numPartitions: 3,
         replicationFactor: 1,
         configEntries: [
           // Examples:
